@@ -1,25 +1,9 @@
 'use client'
 
-import { CssBaseline, ThemeProvider } from '@mui/material'
-import { createTheme } from '@mui/material/styles'
+import { ThemeProvider, CssBaseline } from '@mui/material'
+import { theme } from '@/theme'
 
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#1E40AF', // OperIQ Blue
-    },
-    secondary: {
-      main: '#F59E0B', // Accent color
-    },
-  },
-})
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
