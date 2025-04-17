@@ -2,7 +2,7 @@
 
 import React, { useState, MouseEvent } from 'react'
 import {
-  AppBar,
+  // AppBar,
   Toolbar,
   Container,
   Typography,
@@ -34,8 +34,9 @@ function NavBar() {
   }
 
   return (
-    <AppBar position="fixed" className="navbar">
-      <Container maxWidth="xl">
+    // <AppBar color="transparent">
+    <Box className="navbar-wrapper">
+      <Container maxWidth="lg" className="navbar-inner">
         <Toolbar disableGutters>
           {/* Brand Icon + Name */}
           <BoltIcon className="navbar-icon" />
@@ -93,7 +94,7 @@ function NavBar() {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </Box>
   )
 }
 

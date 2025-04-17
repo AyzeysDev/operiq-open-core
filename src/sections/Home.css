@@ -1,8 +1,9 @@
 /* General Home Styles */
 .home {
-    padding-top: 120px; /* Spacing from the navbar */
+    padding-top: 80px; /* Spacing from the navbar */
+    padding-bottom: 80px; 
     background-color: #f9f9f9;
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
   
   /* Hero Section */
