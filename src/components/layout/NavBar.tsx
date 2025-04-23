@@ -2,19 +2,15 @@
 
 import React, { useState, MouseEvent } from 'react'
 import {
-  // AppBar,
   Toolbar,
   Container,
-  Typography,
   Box,
-  Button,
-  IconButton,
   Menu,
   MenuItem,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import BoltIcon from '@mui/icons-material/Bolt';
-import './NavBar.css' // Importing external CSS file
+import BoltIcon from '@mui/icons-material/Bolt'
+import styles from './NavBar.module.css'
 
 const navItems = [
   { label: 'Features', id: 'features' },
@@ -34,60 +30,45 @@ function NavBar() {
   }
 
   return (
-    // <AppBar color="transparent">
-    <Box className="navbar-wrapper">
-      <Container maxWidth="lg" className="navbar-inner">
+    <Box className={styles.navbarWrapper}>
+      <Container maxWidth="lg" className={styles.navbarInner}>
         <Toolbar disableGutters>
-          {/* Brand Icon + Name */}
-          <BoltIcon className="navbar-icon" />
-          <Typography
-            component="a"
-            href="/"
-            className="navbar-brand"
-          >
+          <BoltIcon className={styles.navbarIcon} />
+          <Box component="a" href="/" className={styles.navbarBrand}>
             OperIQ
-          </Typography>
+          </Box>
 
-          {/* Spacer to push nav items to the right */}
           <Box sx={{ flexGrow: 1 }} />
 
-          {/* Desktop Links */}
-          <Box className="navbar-links">
-            {navItems.map(({ label, id }, index) => (
-              <Button
-                key={index}
-                className="navbar-button"
-                href={`#${id}`}
-              >
+          <Box className={styles.navbarLinks}>
+            {navItems.map(({ label, id }) => (
+              <a key={id} href={`#${id}`} className={styles.navbarButton}>
                 {label}
-              </Button>
+              </a>
             ))}
           </Box>
 
-          {/* Mobile Menu Icon */}
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              onClick={handleOpenNavMenu}
-              className="navbar-menu-icon"
-            >
+            <button onClick={handleOpenNavMenu} className={styles.menuIconButton}>
               <MenuIcon />
-            </IconButton>
+            </button>
             <Menu
               anchorEl={anchorElNav}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
               transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-              className="navbar-menu"
+              className={styles.navbarMenu}
             >
               {navItems.map(({ label, id }) => (
                 <MenuItem
                   key={id}
                   onClick={handleCloseNavMenu}
-                  className="navbar-menu-item"
+                  className={styles.navbarMenuItem}
                 >
-                  <Typography textAlign="center">{label}</Typography>
+                  <a href={`#${id}`} className={styles.menuLink}>
+                    {label}
+                  </a>
                 </MenuItem>
               ))}
             </Menu>

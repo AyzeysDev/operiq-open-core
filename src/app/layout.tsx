@@ -1,16 +1,27 @@
-'use client'
+import { Inter } from 'next/font/google'
+import { ThemeRegistry } from '@/components/ThemeRegistry'
+import './globals.css'
 
-import { ThemeProvider, CssBaseline } from '@mui/material'
-import { theme } from '@/theme'
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata = {
+  title: 'OperIQ',
+  description: 'AI-powered Operations Optimizer',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          {children}
-        </ThemeProvider>
+      <body className={inter.variable}>
+        <ThemeRegistry>{children}</ThemeRegistry>
       </body>
     </html>
   )

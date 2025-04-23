@@ -1,78 +1,57 @@
 'use client'
 
 import React from 'react'
-import { Box, Container, Typography, Button } from '@mui/material'
-import Grid from '@mui/material/Grid2'; // Importing Grid2 for the `size` property
-import './Home.css' // Importing external CSS file
+import { Box, Container } from '@mui/material'
+import Grid from '@mui/material/Grid2'
+import styles from './Home.module.css'
 
 function Home() {
   return (
-    <Box className="home">
+    <Box className={styles.home}>
       <Container maxWidth="lg">
-        {/* Hero Section */}
-        <Grid container spacing={4} alignItems="center" className="home-hero">
-          {/* Left Content */}
+        <Grid container spacing={4} alignItems="center" className={styles.homeHero}>
           <Grid size={{ xs: 12, md: 6 }}>
-            <Typography variant="h2" className="home-title">
-              Welcome to OperIQ
-            </Typography>
-            <Typography variant="body1" className="home-description">
+            <h1 className={styles.homeTitle}>Welcome to OperIQ</h1>
+            <p className={styles.homeDescription}>
               Streamline your operations with AI-powered tools designed to optimize staffing, inventory, and costs.
-            </Typography>
-            <Button
-              variant="contained"
-              className="home-button"
-              href="#get-started"
-            >
+            </p>
+            <a href="#get-started" className={styles.homeButton}>
               Get Started
-            </Button>
+            </a>
           </Grid>
 
-          {/* Right Content */}
           <Grid size={{ xs: 12, md: 6 }}>
-            <Box className="home-illustration">
-              {/* Placeholder for an image or illustration */}
-              <Typography variant="body2" className="home-placeholder">
-                [Illustration Placeholder]
-              </Typography>
+            <Box className={styles.homeIllustration}>
+              <p className={styles.homePlaceholder}>[Illustration Placeholder]</p>
             </Box>
           </Grid>
         </Grid>
 
-        {/* Features Section */}
-        <Box className="home-features">
-          <Typography variant="h4" className="home-features-title">
-            Key Features
-          </Typography>
+        <Box className={styles.homeFeatures}>
+          <h2 className={styles.homeFeaturesTitle}>Key Features</h2>
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-              <Box className="home-feature-card">
-                <Typography variant="h6" className="home-feature-title">
-                  Optimize Schedules
-                </Typography>
-                <Typography variant="body2" className="home-feature-description">
+              <Box className={styles.homeFeatureCard}>
+                <h3 className={styles.homeFeatureTitle}>Optimize Schedules</h3>
+                <p className={styles.homeFeatureDescription}>
                   Automatically generate efficient staffing plans using AI forecasts.
-                </Typography>
+                </p>
               </Box>
             </Grid>
             <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-              <Box className="home-feature-card">
-                <Typography variant="h6" className="home-feature-title">
-                  Manage Inventory
-                </Typography>
-                <Typography variant="body2" className="home-feature-description">
+              <Box className={styles.homeFeatureCard}>
+                <h3 className={styles.homeFeatureTitle}>Manage Inventory</h3>
+                <p className={styles.homeFeatureDescription}>
                   Predict and control inventory with data-driven recommendations.
-                </Typography>
+                </p>
               </Box>
             </Grid>
             <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-              <Box className="home-feature-card">
-                <Typography variant="h6" className="home-feature-title">
-                  Analyze Costs
-                </Typography>
-                <Typography variant="body2" className="home-feature-description">
+              <Box className={styles.homeFeatureCard}>
+                <h3 className={styles.homeFeatureTitle}>Analyze Costs</h3>
+                <p className={styles.homeFeatureDescription}>
                   Discover hidden inefficiencies and improve profitability.
-                </Typography>
+                </p>
               </Box>
             </Grid>
           </Grid>

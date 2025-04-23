@@ -1,18 +1,11 @@
-/* AppBar Styles */
-/* .navbar {
-  background: linear-gradient(90deg, rgb(219, 196, 255), #8665ba);
-  box-shadow: 0px 4px 15px rgba(191, 105, 245, 0.5);
-  border-radius: 12px;
-} */
-
-.navbar-wrapper {
+.navbarWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 24px;
 }
 
-.navbar-inner {
+.navbarInner {
   background: linear-gradient(90deg, rgb(219, 196, 255), #8665ba);
   box-shadow: 0px 4px 15px rgba(191, 105, 245, 0.5);
   padding: 12px 24px;
@@ -20,24 +13,21 @@
   width: 100%;
 }
 
-
-/* Brand Icon */
-.navbar-icon {
-  margin-right: 16px; /* Equivalent to mr: 2 */
+.navbarIcon {
+  margin-right: 16px;
   color: #bf69f5;
   display: none;
 }
 
 @media (min-width: 900px) {
-  .navbar-icon {
+  .navbarIcon {
     display: flex;
     font-size: 2rem;
   }
 }
 
-/* Brand Name */
-.navbar-brand {
-  margin-right: 16px; /* Equivalent to mr: 2 */
+.navbarBrand {
+  margin-right: 16px;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -47,26 +37,25 @@
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-.navbar-brand:hover {
+.navbarBrand:hover {
   color: #bf69f5;
   text-shadow: 0px 0px 10px rgba(191, 105, 245, 0.8);
 }
 
-/* Desktop Links */
-.navbar-links {
+.navbarLinks {
   display: none;
-  gap: 16px; /* Equivalent to gap: 2 */
+  gap: 16px;
 }
 
 @media (min-width: 900px) {
-  .navbar-links {
+  .navbarLinks {
     display: flex;
   }
 }
 
-.navbar-button {
-  margin: 8px 0; /* Equivalent to my: 1 */
-  padding: 8px 16px; /* Equivalent to px: 2, py: 1 */
+.navbarButton {
+  margin: 8px 0;
+  padding: 8px 16px;
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
@@ -75,27 +64,25 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-button:hover {
+.navbarButton:hover {
   background-color: #090909;
   color: #bf69f5;
   box-shadow: 0px 0px 15px rgba(191, 105, 245, 0.7);
   transform: scale(1.05);
 }
 
-/* Mobile Menu Icon */
-.navbar-menu-icon {
-  padding: 8px; /* Equivalent to padding: 1 */
+.navbarMenuIcon {
+  padding: 8px;
 }
 
-/* Mobile Menu */
-.navbar-menu .MuiPaper-root {
+.navbarMenu .MuiPaper-root {
   background-color: #ffffff;
   color: #bf69f5;
   padding: 8px;
-  border-radius: 12px; /* Rounded corners for the mobile menu */
+  border-radius: 12px;
 }
 
-.navbar-menu-item:hover {
+.navbarMenuItem:hover {
   background-color: #bf69f5;
   color: #ffffff;
 }
