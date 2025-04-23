@@ -23,7 +23,12 @@
 }
 
 .homeButton {
-  background: linear-gradient(90deg, rgb(219, 196, 255), #8665ba);
+  background: linear-gradient(
+    90deg,
+    #f472b6,      /* pink */
+    #8665ba,      /* purple */
+    #3b82f6       /* blue */
+  );
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 8px;
@@ -33,13 +38,20 @@
   transition: all 0.3s ease-in-out;
   border: none;
   cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(134, 101, 186, 0.25);
 }
 
 .homeButton:hover {
-  background: linear-gradient(90deg, #8665ba, rgb(219, 196, 255));
-  box-shadow: 0px 4px 10px rgba(134, 101, 186, 0.5);
-  transform: scale(1.05);
+  background: linear-gradient(
+    270deg,
+    #3b82f6,      /* blue */
+    #8665ba,      /* purple */
+    #f472b6       /* pink */
+  );
+  box-shadow: 0px 6px 20px rgba(134, 101, 186, 0.6);
+  transform: translateY(-2px) scale(1.05);
 }
+
 
 .homeIllustration {
   background-color: #eaeaea;

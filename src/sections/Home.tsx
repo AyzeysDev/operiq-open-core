@@ -26,36 +26,6 @@ function Home() {
             </Box>
           </Grid>
         </Grid>
-
-        <Box className={styles.homeFeatures}>
-          <h2 className={styles.homeFeaturesTitle}>Key Features</h2>
-          <Grid container spacing={4}>
-            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-              <Box className={styles.homeFeatureCard}>
-                <h3 className={styles.homeFeatureTitle}>Optimize Schedules</h3>
-                <p className={styles.homeFeatureDescription}>
-                  Automatically generate efficient staffing plans using AI forecasts.
-                </p>
-              </Box>
-            </Grid>
-            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-              <Box className={styles.homeFeatureCard}>
-                <h3 className={styles.homeFeatureTitle}>Manage Inventory</h3>
-                <p className={styles.homeFeatureDescription}>
-                  Predict and control inventory with data-driven recommendations.
-                </p>
-              </Box>
-            </Grid>
-            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-              <Box className={styles.homeFeatureCard}>
-                <h3 className={styles.homeFeatureTitle}>Analyze Costs</h3>
-                <p className={styles.homeFeatureDescription}>
-                  Discover hidden inefficiencies and improve profitability.
-                </p>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
       </Container>
     </Box>
   )

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, MouseEvent } from 'react'
+import Link from 'next/link'
 import {
   Toolbar,
   Container,
@@ -15,6 +16,7 @@ import styles from './NavBar.module.css'
 const navItems = [
   { label: 'Features', id: 'features' },
   { label: 'Pricing', id: 'pricing' },
+  { label: 'About', id: 'about' }, // Added About link
   { label: 'Get Started', id: 'get-started' },
 ]
 
@@ -34,9 +36,9 @@ function NavBar() {
       <Container maxWidth="lg" className={styles.navbarInner}>
         <Toolbar disableGutters>
           <BoltIcon className={styles.navbarIcon} />
-          <Box component="a" href="/" className={styles.navbarBrand}>
+          <Link href="/" className={styles.navbarBrand}>
             OperIQ
-          </Box>
+          </Link>
 
           <Box sx={{ flexGrow: 1 }} />
 
