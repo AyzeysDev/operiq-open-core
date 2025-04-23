@@ -59,7 +59,7 @@ function Home() {
                   },
                   '& .Mui-selected': {
                     backgroundColor: '#3b82f6', // Purple background for selected item
-                    color: '#ffffff', // White text for selected item
+                    color: '#f9f9f9', // White text for selected item
                   },
                   '& .MuiPaginationItem-root:hover': {
                     backgroundColor: '#f472b6', // Light purple hover effect
