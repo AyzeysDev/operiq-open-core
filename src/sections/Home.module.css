@@ -23,12 +23,7 @@
 }
 
 .homeButton {
-  background: linear-gradient(
-    90deg,
-    #f472b6,      /* pink */
-    #8665ba,      /* purple */
-    #3b82f6       /* blue */
-  );
+  background: linear-gradient(90deg, #f472b6, #8665ba, #3b82f6);
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 8px;
@@ -38,73 +33,30 @@
   transition: all 0.3s ease-in-out;
   border: none;
   cursor: pointer;
-  box-shadow: 0px 2px 5px rgba(134, 101, 186, 0.25);
 }
 
 .homeButton:hover {
-  background: linear-gradient(
-    270deg,
-    #3b82f6,      /* blue */
-    #8665ba,      /* purple */
-    #f472b6       /* pink */
-  );
+  background: linear-gradient(270deg, #3b82f6, #8665ba, #f472b6);
   box-shadow: 0px 6px 20px rgba(134, 101, 186, 0.6);
   transform: translateY(-2px) scale(1.05);
 }
 
-
-.homeIllustration {
-  background-color: #eaeaea;
-  height: 300px;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+.homeGraphImageBox {
+  background-color: #f9f9f9;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.homePlaceholder {
-  color: #999999;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.homeFeatures {
-  margin-top: 80px;
-}
-
-.homeFeaturesTitle {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #090909;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.homeFeatureCard {
-  background-color: #ffffff;
-  border-radius: 8px;
+  max-width: 520px;
+  margin: 0 auto;
   padding: 16px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
-.homeFeatureCard:hover {
-  box-shadow: 0px 4px 15px rgba(134, 101, 186, 0.3);
-  transform: translateY(-5px);
+.graphImage {
+  border-radius: 10px;
+  object-fit: contain;
 }
 
-.homeFeatureTitle {
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: #090909;
-  margin-bottom: 8px;
-}
-
-.homeFeatureDescription {
-  font-size: 0.9rem;
-  color: #666666;
+.pagination {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
 }
